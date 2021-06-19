@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jan 2021 pada 05.12
--- Versi Server: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Jun 19, 2021 at 03:53 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_absen`
+-- Table structure for table `t_absen`
 --
 
 CREATE TABLE `t_absen` (
@@ -41,19 +43,10 @@ CREATE TABLE `t_absen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `t_absen`
+-- Dumping data for table `t_absen`
 --
 
 INSERT INTO `t_absen` (`id_absen`, `tanggal`, `jam_masuk`, `stat`, `id_fingerprint`, `n_poor`, `n_average`, `n_good`, `n_excellent`, `stat_nilai`, `no_ref`) VALUES
-(107, '2020-11-11', '08:03:35', 'M', '2', 4, 2, 6, 4, 'SN', 7),
-(108, '2020-11-12', '08:02:56', 'M', '1', 0, 0, 0, 0, 'BN', 7),
-(109, '2020-12-28', '08:02:56', 'M', '2', 0, 10, 10, 10, 'SN', 7),
-(110, '2021-01-07', '08:02:56', 'M', '2', 2, 1, 4, 3, 'SN', 7),
-(112, '2021-01-08', '08:02:24', 'M', '2', 3, 6, 4, 1, 'SN', 7),
-(113, '2021-01-09', '08:06:35', 'M', '2', 3, 4, 1, 2, 'SN', 7),
-(114, '2021-01-10', '08:02:56', 'M', '1', 0, 0, 0, 2, 'SN', 7),
-(115, '2021-02-08', '08:05:56', 'M', '1', 0, 0, 0, 0, 'BN', 7),
-(116, '2021-02-10', '08:03:35', 'M', '2', 0, 0, 0, 0, 'BN', 7),
 (117, '2020-11-11', '00:00:00', 'A', '1', 0, 0, 0, 0, 'SN', 7),
 (118, '2021-01-08', '00:00:00', 'A', '1', 0, 0, 0, 0, 'SN', 7),
 (119, '2021-01-09', '00:00:00', 'A', '1', 0, 0, 0, 0, 'SN', 7),
@@ -78,12 +71,41 @@ INSERT INTO `t_absen` (`id_absen`, `tanggal`, `jam_masuk`, `stat`, `id_fingerpri
 (164, '2020-09-16', '08:02:56', 'M', '2', 3, 1, 1, 2, 'SN', 11),
 (165, '2020-09-17', '08:02:56', 'M', '2', 1, 2, 2, 3, 'SN', 11),
 (166, '2020-09-17', '08:02:56', 'M', '1', 0, 2, 2, 3, 'SN', 11),
-(167, '2021-01-07', '08:04:00', 'M', '1', 0, 0, 0, 2, 'BN', 11);
+(170, '2020-11-11', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 13),
+(172, '2020-11-11', '08:03:35', 'M', 'asasas', 0, 0, 0, 0, 'BN', 15),
+(173, '2020-11-11', '08:03:35', 'M', '2', 0, 0, 0, 0, 'BN', 16),
+(174, '2020-11-12', '08:02:56', 'M', '1', 0, 0, 0, 0, 'BN', 16),
+(175, '2020-12-28', '08:02:56', 'M', '2', 0, 0, 0, 0, 'BN', 16),
+(176, '2021-01-07', '08:02:56', 'M', '2', 9, 9, 9, 9, 'SN', 16),
+(177, '2021-01-07', '08:04:00', 'M', '1', 10, 9, 9, 9, 'SN', 16),
+(178, '2021-01-08', '08:02:24', 'M', '2', 9, 9, 9, 9, 'SN', 16),
+(179, '2021-01-09', '08:03:35', 'M', '2', 10, 9, 9, 9, 'SN', 16),
+(180, '2021-01-10', '08:02:56', 'M', '1', 10, 9, 9, 9, 'SN', 16),
+(181, '2021-02-08', '08:05:56', 'M', '1', 0, 0, 0, 0, 'SN', 16),
+(182, '2021-02-10', '08:03:35', 'M', '2', 8, 0, 8, 8, 'SN', 16),
+(183, '2021-01-10', '08:02:56', 'M', '111', 8, 7, 5, 10, 'SN', 16),
+(184, '2021-01-10', '08:02:56', 'M', '232323', 9, 9, 9, 9, 'SN', 16),
+(185, '2020-12-28', '00:00:00', 'A', '1', 0, 0, 0, 0, 'SN', 16),
+(186, '2020-11-12', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 16),
+(187, '2020-12-28', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 16),
+(188, '2021-01-07', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 16),
+(189, '2021-01-08', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 16),
+(190, '2021-01-09', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 16),
+(191, '2021-02-08', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 16),
+(192, '2021-02-10', '00:00:00', 'A', '232323', 0, 0, 0, 0, 'SN', 16),
+(193, '2020-11-11', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16),
+(194, '2020-11-12', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16),
+(195, '2020-12-28', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16),
+(196, '2021-01-07', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16),
+(197, '2021-01-08', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16),
+(198, '2021-01-09', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16),
+(199, '2021-02-08', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16),
+(200, '2021-02-10', '00:00:00', 'A', '111', 0, 0, 0, 0, 'SN', 16);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_caddy`
+-- Table structure for table `t_caddy`
 --
 
 CREATE TABLE `t_caddy` (
@@ -97,21 +119,22 @@ CREATE TABLE `t_caddy` (
   `tlp` varchar(15) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `bergabung` date NOT NULL,
-  `hapus` tinyint(1) NOT NULL DEFAULT '0'
+  `hapus` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `t_caddy`
+-- Dumping data for table `t_caddy`
 --
 
 INSERT INTO `t_caddy` (`id_caddy`, `id_fingerprint`, `nama`, `nip`, `email`, `jk`, `foto`, `tlp`, `alamat`, `bergabung`, `hapus`) VALUES
 (4, '1', 'Viki', '1234567890', 'adi.hidayat@raharja.info', 'L', '12345678901.jpg', '087880096343', 'Jl. Mawar Indah ', '2021-03-01', 0),
-(6, '2', 'Ana Adiyani', '1511483806', 'ana@raharja.info', 'P', '15114838061.jpg', '089611508717', 'Jl. Rumah Orang', '2021-03-01', 0);
+(6, '2', 'Ana Adiyani', '1511483806', 'ana@raharja.info', 'P', '15114838061.jpg', '089611508717', 'Jl. Rumah Orang', '2021-03-01', 0),
+(9, '111', 'Aaa', '1877777777', 'Agungrizky@raharja.info', 'L', '1877777777.jpg', '1218291821', 'asasasasasasa', '1970-01-01', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_laporan`
+-- Table structure for table `t_laporan`
 --
 
 CREATE TABLE `t_laporan` (
@@ -128,21 +151,25 @@ CREATE TABLE `t_laporan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `t_laporan`
+-- Dumping data for table `t_laporan`
 --
 
 INSERT INTO `t_laporan` (`id_laporan`, `no_laporan`, `periode_laporan`, `id_user`, `id_caddy`, `skor_absen`, `skor_turun`, `total_skor`, `tgl_dibuat`, `stat_laporan`) VALUES
-(19, '002/FPK-MR/01/21', '2021-01', 1, 4, -12, 85, 73, '2021-01-17', 'LS'),
-(20, '002/FPK-MR/01/21', '2021-01', 1, 6, -7, 665, 658, '2021-01-17', 'LS'),
-(25, '002/FPK-MR/12/21', '2020-12', 1, 4, 0, 0, 0, '2021-01-18', 'LM'),
-(28, '002/FPK-MR/12/21', '2020-12', 1, 6, 4, 750, 754, '2021-01-18', 'LM'),
-(32, '002/FPK-MR/09/21', '2020-09', 1, 6, -13, 1010, 997, '2021-01-23', 'LM'),
-(33, '002/FPK-MR/09/21', '2020-09', 1, 4, 5, 800, 805, '2021-01-23', 'LM');
+(25, '002/FPK-MR/12/21', '2020-12', 1, 4, 0, 0, 0, '2021-01-18', 'LS'),
+(28, '002/FPK-MR/12/21', '2020-12', 1, 6, 4, 750, 754, '2021-01-18', 'LS'),
+(32, '002/FPK-MR/09/21', '2020-09', 1, 6, -13, 1010, 997, '2021-01-23', 'LS'),
+(33, '002/FPK-MR/09/21', '2020-09', 1, 4, 5, 800, 805, '2021-01-23', 'LS'),
+(42, '004/FPK-MR/01/21', '2021-01', 1, 6, 2, 2165, 2167, '2021-06-19', 'LM'),
+(43, '004/FPK-MR/01/21', '2021-01', 1, 4, -12, 1450, 1438, '2021-06-19', 'LM'),
+(44, '004/FPK-MR/01/21', '2021-01', 1, 9, -26, 605, 579, '2021-06-19', 'LM'),
+(45, '004/FPK-MR/01/21', '2021-01', 1, 8, -26, 720, 694, '2021-06-19', 'LM'),
+(46, '001/FPK-MR/02/21', '2021-02', 1, 6, -6, 480, 474, '2021-06-19', 'LM'),
+(47, '002/FPK-MR/02/21', '2021-02', 1, 4, -15, 0, -15, '2021-06-19', 'LM');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_nilai`
+-- Table structure for table `t_nilai`
 --
 
 CREATE TABLE `t_nilai` (
@@ -161,21 +188,25 @@ CREATE TABLE `t_nilai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `t_nilai`
+-- Dumping data for table `t_nilai`
 --
 
 INSERT INTO `t_nilai` (`id_nilai`, `id_caddy`, `periode`, `total_absen`, `total_telat`, `total_alpa`, `total_sakit`, `total_turun`, `total_poor`, `total_average`, `total_good`, `total_excellent`) VALUES
-(2, 6, '2021-01', 2, 1, 1, 0, 34, 8, 11, 9, 6),
-(3, 4, '2021-01', 2, 0, 2, 0, 3, 0, 0, 1, 2),
+(2, 6, '2021-01', 3, 0, 1, 0, 109, 28, 27, 27, 27),
+(3, 4, '2021-01', 2, 0, 2, 0, 74, 20, 18, 18, 18),
 (4, 6, '2020-12', 1, 0, 0, 0, 30, 0, 10, 10, 10),
 (5, 6, '2020-11', 1, 0, 1, 0, 16, 4, 2, 6, 4),
 (7, 6, '2020-09', 3, 1, 2, 0, 49, 12, 10, 12, 15),
-(8, 4, '2020-09', 4, 0, 1, 0, 32, 2, 6, 10, 14);
+(8, 4, '2020-09', 4, 0, 1, 0, 32, 2, 6, 10, 14),
+(9, 9, '2021-01', 1, 0, 3, 0, 30, 8, 7, 5, 10),
+(10, 8, '2021-01', 1, 0, 3, 0, 36, 9, 9, 9, 9),
+(11, 6, '2021-02', 1, 0, 1, 0, 24, 8, 0, 8, 8),
+(12, 4, '2021-02', 0, 1, 1, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_user`
+-- Table structure for table `t_user`
 --
 
 CREATE TABLE `t_user` (
@@ -188,17 +219,17 @@ CREATE TABLE `t_user` (
   `nip` char(10) NOT NULL,
   `roll` char(1) NOT NULL,
   `reset_key` char(5) NOT NULL,
-  `hapus` tinyint(1) NOT NULL DEFAULT '0'
+  `hapus` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `t_user`
+-- Dumping data for table `t_user`
 --
 
 INSERT INTO `t_user` (`id_user`, `username`, `password`, `email`, `nama`, `foto`, `nip`, `roll`, `reset_key`, `hapus`) VALUES
-(1, 'caddymaster', '$2y$10$bP.yKdQJy/k9Npk6ewSRY.Dti08/6OECiX7Q2MaC.Wy1mHasmqhJK', 'adi.hidayat@raharja.info', 'Indah Purnamasari', '123456789.jpg', '1234567890', '1', '', 0),
-(2, 'gomanager', '$2y$10$/HBattTu/J7o47HuQEBaE.yBNzf43lxg/Z6kckCo6H0G9t9S49Ubi', 'adi.hidayat@raharja.info', 'Dian P', '1234567891.jpg', '1234567891', '2', '', 0),
-(3, 'admin', '$2y$10$J0jlGSvfjzpCORBHJH//vudPlWYPJ3ab2/.RHq414NlqLCPcUMg0e', 'adi.hidayat@raharja.info', 'Administrator', 'admin.png', '', '3', '', 0);
+(1, 'PETUGAS KALIBRASI', '$2y$10$bP.yKdQJy/k9Npk6ewSRY.Dti08/6OECiX7Q2MaC.Wy1mHasmqhJK', 'agungrizky@raharja.info', 'Viki Andriyan', '1234567890.jpeg', '1234567890', '1', '', 0),
+(2, 'SUPERVISIOR', '$2y$10$k4FUkx7evN4yd19xTTiGEuI01/IJ60NThv9gWrKHe8TwhsuOB2n0K', 'agungrizky@raharja.info', 'Supervisior', '12345678911.jpg', '1234567891', '2', '', 0),
+(3, 'admin', '$2y$10$J0jlGSvfjzpCORBHJH//vudPlWYPJ3ab2/.RHq414NlqLCPcUMg0e', '', 'Administrator', 'admin.png', '', '3', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -244,27 +275,33 @@ ALTER TABLE `t_user`
 -- AUTO_INCREMENT for table `t_absen`
 --
 ALTER TABLE `t_absen`
-  MODIFY `id_absen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+  MODIFY `id_absen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+
 --
 -- AUTO_INCREMENT for table `t_caddy`
 --
 ALTER TABLE `t_caddy`
-  MODIFY `id_caddy` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_caddy` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `t_laporan`
 --
 ALTER TABLE `t_laporan`
-  MODIFY `id_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
 --
 -- AUTO_INCREMENT for table `t_nilai`
 --
 ALTER TABLE `t_nilai`
-  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `t_user`
 --
 ALTER TABLE `t_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
